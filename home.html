@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Toggle Button</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-bar {
+      display: none;
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-bar li {
+      background-color: #333;
+      padding: 10px;
+      color: white;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+
+    .menu-bar li:hover {
+      background-color: #555;
+    }
+
+    .toggle-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .toggle-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 600px) {
+      .menu-bar {
+        display: flex;
+      }
+
+      .menu-bar li {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn">☰ Menu</button>
+
+  <ul class="menu-bar">
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact</li>
+  </ul>
+
+  <script>
+    // JavaScript for toggling the menu
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const menuBar = document.querySelector('.menu-bar');
+
+    toggleBtn.addEventListener('click', function() {
+      // Toggle the visibility of the menu bar
+      menuBar.style.display = menuBar.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
+</body>
+</html>
